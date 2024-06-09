@@ -1,111 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Create Account</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+    <style type="text/css">
+        body {
+            background-color: #c98b40;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1em;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 1em 0;
+        }
+
+        .coffee, .bread {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .coffee-item, .bread-item {
+            width: 22%; /* approximately 1/4 of the container with some margin for spacing */
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        .coffee-item img, .bread-item img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 5px 10px 20px black;
+            transition: transform 0.3s ease;
+        }
+
+        .coffee-item a img:hover, .bread-item a img:hover {
+            transform: scale(1.10);
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Lucida Console', monospace;
+            color: white;
+        }
+
+        h4 {
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        @media (max-width: 1200px) {
+            .coffee-item, .bread-item {
+                width: 30%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .coffee-item, .bread-item {
+                width: 20%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .coffee-item, .bread-item {
+                width: 40%;
+            }
+
+            .section-title {
+                font-size: 40px;
+            }
+
+            h3, h4 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
-
-	<style type="text/css">
-
-		* {
-			margin: 0;
-			padding: 0;
-		}
-
-		body {
-			font-family: sans-serif;
-			background-color: #2b2b2b;
-			display: flex;
-			justify-content: center;
-
-
-		}
-
-		.container {
-			margin-top: 40px;
-			border: solid 4px #00fcec;
-			border-radius: 20px;
-			box-shadow: 0 0 20px #00fcec;
-		}
-
-		.card {
-			padding: 0px 10px;
-		}
-
-		h1 {
-			padding: 20px 30px;
-			color: white;
-			font-size: 30px;
-		}
-
-		.container input {
-			margin-bottom: 20px;
-		    margin-left: 18px;
-		    display: flex;
-		    letter-spacing: 1px;
-		    font-size: 19px;
-		    width: 230px;
-		    height: 30px;
-		    padding: 5px;
-		    border: 1px solid #00fcec;
-		    border-radius: 5px;
-		    transition: border-color 0.3s, box-shadow 0.3s; /* Add transition for a smooth effect */
-		    outline: none;
-		}
-
-
-		.container h3 {
-			margin-bottom: 7px;
-			margin-left: 85px;
-			letter-spacing: 2px;
-			color: white;
-			font-size: 15px;
-		}
-
-		.login-bttn {
-			display: flex;
-			justify-content: center;
-			
-		}
-
-		.login-bttn button {
-			margin-bottom: 40px;
-			margin-top: 10px;
-			padding: 9px 80px;
-			cursor: pointer;
-		}	
-
-
-	</style>
-
 <body>
+    <div class="top container">
+        <h1 class="section-title">Products</h1>
+    </div>
 
-	<div class="container">
+    <div class="container">
+        <h2 class="section-title">Coffee</h2>
+        <section class="coffee">
+            <div class="coffee-item">
+                <a href="#"><img src="caffe-mocha.png" alt="Caffe Mocha"></a>
+                <h3>Caffe Mocha</h3>
+                <h4>₱200</h4>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="chocolate-frappuccino.png" alt="Chocolate Frappuccino"></a>
+                <h3>Chocolate Frappuccino</h3>
+                <h4>₱150</h4>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="ice-latte.jpg" alt="Ice Latte"></a>
+                <h3>Ice Latte</h3>
+                <h4>₱240</h4>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="frappe.jpg" alt="Frappe"></a>
+                <h3>Frappe</h3>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="flat-white.png" alt="Flat White"></a>
+                <h3>Flat White</h3>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="frappe.jpg" alt="Frappe"></a>
+                <h3>Frappe</h3>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="vanilla-frappuccino.jpg" alt="Vanilla Frappuccino"></a>
+                <h3>Vanilla Frappuccino</h3>
+            </div>
+            <div class="coffee-item">
+                <a href="#"><img src="caramel-macchiato.jpg" alt="Caramel Macchiato"></a>
+                <h3>Caramel Macchiato</h3>
+            </div>
+        </section>
 
-		<div class="card">
-		
-		<h1> Create Account </h1>
-
-			<input type="text" placeholder="First name">
-
-			<input type="text" placeholder="Last name">
-
-			<input type="text" placeholder="Middle name">
-
-			<input type="email" placeholder="Email Address">
-
-
-
-			<div class="login-bttn">
-				
-				<button> <a href="#"></a> Sign In </button>
-
-			</div>
-
-
-	</div>
-
-
+        <h2 class="section-title">Bread</h2>
+        <section class="bread">
+            <div class="bread-item">
+                <a href="#"><img src="regular-pandesal.jpg" alt="Regular Pandesal"></a>
+                <h3>Regular Pandesal</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="tuna.jpg" alt="Tuna Pandesal"></a>
+                <h3>Tuna Pandesal</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="pandecoco.jpg" alt="Pandecoco"></a>
+                <h3>Pan De Coco</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="ensaymada.jpg" alt="Ensaymada"></a>
+                <h3>Ensaymada</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="cheese-roll.jpg" alt="Cheese Roll"></a>
+                <h3>Cheese Roll</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="spanish-bread.jpg" alt="Spanish Bread"></a>
+                <h3>Spanish Bread</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="cinnamon-rolls.jpg" alt="Cinnamon Roll"></a>
+                <h3>Cinnamon Roll</h3>
+            </div>
+            <div class="bread-item">
+                <a href="#"><img src="doughnuts.jpg" alt="Doughnut"></a>
+                <h3>Doughnut</h3>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
